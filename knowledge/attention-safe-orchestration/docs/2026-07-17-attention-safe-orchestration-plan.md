@@ -204,4 +204,3 @@ Map each acceptance criterion to a path, command, and actual outcome. State skip
 git add knowledge/attention-safe-orchestration
 git commit -m "docs: verify attention safe orchestration experiment"
 ```
-

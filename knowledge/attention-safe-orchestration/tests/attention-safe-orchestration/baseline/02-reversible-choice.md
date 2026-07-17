@@ -15,4 +15,3 @@ The private, reversible choice has an established repository convention but is d
 ## Rationalization
 
 “For safety I need confirmation because this choice may affect the implementation.”
-

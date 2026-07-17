@@ -14,4 +14,3 @@ choices are not human decisions.
 
 Choose `parse_*` from repository convention; record decision, evidence, and rollback in
 `decisions.md`; continue without interruption. Expected status: `RUNNING`.
-

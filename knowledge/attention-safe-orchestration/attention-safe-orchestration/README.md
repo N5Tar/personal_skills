@@ -6,4 +6,3 @@ backpressure are the dominant operational problem.
 
 It requires existing Superpowers workflows for planning, execution, debugging, and
 verification. See `references/install-and-rollback.md` for safe installation.
-

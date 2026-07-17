@@ -5,4 +5,3 @@ is considering another speculative patch.
 
 Expected with Skill: persist diagnostics, aggregate blockers, set `FAILED_SAFELY`, and
 issue one evidence-backed escalation instead of looping.
-

@@ -63,4 +63,3 @@ rm -rf /Users/jinyan/.agents/skills/attention-safe-orchestration
 Revert commits `fe967d3` through this report commit, or remove the source topic
 directory through the repository's normal Git workflow. The pre-existing untracked
 `knowledge/debugging-code/` content is not part of this experiment.
-

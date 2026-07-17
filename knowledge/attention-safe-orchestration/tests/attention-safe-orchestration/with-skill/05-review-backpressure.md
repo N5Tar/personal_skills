@@ -20,4 +20,3 @@ WAITING_REVIEW_CAPACITY
 
 Preserve the draft `handoff.md`, transition to `WAITING_REVIEW_CAPACITY`, and do not
 announce a third review.
-

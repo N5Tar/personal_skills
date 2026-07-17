@@ -23,4 +23,3 @@ rm -rf ~/.agents/skills/attention-safe-orchestration
 
 To remove the experiment source, delete
 `knowledge/attention-safe-orchestration/` in its Git commit/revert workflow.
-

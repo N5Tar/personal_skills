@@ -92,4 +92,3 @@ commit range, one-line verification, and whether a human judgment risk remains.
 `brief.md` contains `staging_url=https://staging.example.test`. Read it, use that URL,
 record “used brief.md; reversible task-local choice” in `decisions.md` and the command
 in `evidence.md`, then continue. Do not ask the human for a value already in task files.
-

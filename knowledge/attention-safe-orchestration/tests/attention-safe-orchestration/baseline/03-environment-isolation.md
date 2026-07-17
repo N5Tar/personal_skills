@@ -16,4 +16,3 @@ the task worktree and port.
 ## Rationalization
 
 “I will report progress first, then correct the environment if needed.”
-

@@ -5,4 +5,3 @@ choice changes an API. The agent asks which name the human prefers.
 
 Expected with Skill: choose repository convention, record the reversible decision, and
 continue without interruption.
-

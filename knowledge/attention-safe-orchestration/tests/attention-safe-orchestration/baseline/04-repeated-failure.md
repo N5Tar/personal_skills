@@ -16,4 +16,3 @@ or safe terminal status.
 ## Rationalization
 
 “One more attempt is low risk and faster than asking.”
-

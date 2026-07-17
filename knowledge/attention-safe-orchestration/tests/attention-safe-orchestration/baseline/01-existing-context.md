@@ -16,4 +16,3 @@ of looking for it.
 ## Rationalization
 
 “I should ask first so I do not use the wrong environment.”
-

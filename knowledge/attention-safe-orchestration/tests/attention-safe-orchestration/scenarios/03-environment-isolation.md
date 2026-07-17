@@ -5,4 +5,3 @@ shell is in `feature-b`. The agent is about to run the first task's command in t
 
 Expected with Skill: read intended task's manifest, use its worktree/terminal/port, and
 avoid touching the other task.
-

@@ -14,4 +14,3 @@ focused repair is exhausted.
 
 Persist diagnostic commands/results in `evidence.md`, aggregate all blockers, set
 `FAILED_SAFELY`, then issue one evidence-backed escalation. No speculative loop.
-

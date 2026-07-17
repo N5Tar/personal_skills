@@ -5,4 +5,3 @@ has verification evidence and a draft handoff.
 
 Expected with Skill: set `WAITING_REVIEW_CAPACITY`, retain handoff draft, and create no
 new review interruption.
-

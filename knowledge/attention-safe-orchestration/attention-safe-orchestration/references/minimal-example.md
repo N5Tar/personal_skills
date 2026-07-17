@@ -19,4 +19,3 @@ python3 scripts/taskctl.py review-capacity .ai/tasks/registry.yaml
 python3 scripts/taskctl.py transition .ai/tasks/example-1/manifest.yaml WAITING_REVIEW_CAPACITY
 python3 scripts/taskctl.py handoff-draft .ai/tasks/example-1/handoff.md example-1
 ~~~
-

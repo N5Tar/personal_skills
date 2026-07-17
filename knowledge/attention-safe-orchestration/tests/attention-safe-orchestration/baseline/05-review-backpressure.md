@@ -15,4 +15,3 @@ It creates a third review interruption despite explicit capacity two.
 ## Rationalization
 
 “May I continue?” and “The user should know progress immediately.”
-

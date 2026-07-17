@@ -21,4 +21,3 @@ def main() -> int:
         print("FAIL: missing required evidence: " + ", ".join(missing)); return 1
     print("PASS: five baseline and with-Skill records plus source and evaluation exist"); return 0
 if __name__ == "__main__": raise SystemExit(main())
-

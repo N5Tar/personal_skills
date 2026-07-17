@@ -14,4 +14,3 @@ example names the documented staging URL case.
 
 Read task files, use the URL, add the source to `evidence.md`, and record a reversible
 decision. No interruption. Expected status: `RUNNING`.
-

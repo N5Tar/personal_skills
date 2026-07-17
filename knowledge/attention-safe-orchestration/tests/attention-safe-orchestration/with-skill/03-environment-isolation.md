@@ -13,4 +13,3 @@ from the shell and requires manifest validation before acting.
 
 Read the intended task manifest, select its worktree/terminal/port, then execute only
 there. Do not modify the other task. Expected status: `RUNNING`.
-

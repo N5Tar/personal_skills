@@ -92,4 +92,3 @@ One-sentence delivered result.
 
 - ...
 ~~~
-
