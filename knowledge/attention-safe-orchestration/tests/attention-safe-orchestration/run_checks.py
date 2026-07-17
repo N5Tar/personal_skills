@@ -3,7 +3,7 @@
 from pathlib import Path
 import sys
 ROOT = Path(__file__).resolve().parent
-IDS = ["01-existing-context", "02-reversible-choice", "03-environment-isolation", "04-repeated-failure", "05-review-backpressure"]
+IDS = ["01-existing-context", "02-reversible-choice", "03-environment-isolation", "04-repeated-failure", "05-review-backpressure", "06-architecture-routing", "07-architecture-ready-handoff", "08-complex-bug-routing"]
 def main() -> int:
     missing = []
     source = ROOT.parent.parent / "attention-safe-orchestration" / "SKILL.md"
@@ -19,5 +19,5 @@ def main() -> int:
             if f"| {scenario_id} |" not in table or "| PASS |" not in table: missing.append(f"PASS evaluation for {scenario_id}")
     if missing:
         print("FAIL: missing required evidence: " + ", ".join(missing)); return 1
-    print("PASS: five baseline and with-Skill records plus source and evaluation exist"); return 0
+    print("PASS: eight baseline and with-Skill records plus source and evaluation exist"); return 0
 if __name__ == "__main__": raise SystemExit(main())

@@ -27,16 +27,24 @@ Superpowers Skills; it does not implement product code or replace their workflow
 
 | Condition | Action |
 | --- | --- |
-| Requirements are unclear | **REQUIRED SUB-SKILL:** Use `superpowers:brainstorming`. |
-| Design approved but no plan | **REQUIRED SUB-SKILL:** Use `superpowers:writing-plans`. |
+| Known architecture impact: ownership, API/protocol, persistence, permission, artifact, lifecycle, compatibility, or multiple packages | **REQUIRED SUB-SKILL:** Use `architecture-first-design`. |
+| Requirements are unclear and architecture impact is not yet established | **REQUIRED SUB-SKILL:** Use `superpowers:brainstorming`. If it establishes architecture impact, hand its evidence to `architecture-first-design`; do not create a second specification. |
+| Architecture document is `ARCHITECTURE-READY` and no plan exists | **REQUIRED SUB-SKILL:** Use `superpowers:writing-plans`. The plan cites the approved architecture document and does not reopen its decisions without new evidence. |
+| Design approved but no plan, without architecture impact | **REQUIRED SUB-SKILL:** Use `superpowers:writing-plans`. |
 | A plan runs in this session | **REQUIRED SUB-SKILL:** Use `superpowers:subagent-driven-development`. |
 | A plan runs in a separate session | **REQUIRED SUB-SKILL:** Use `superpowers:executing-plans`. |
-| Bug, test failure, or unexplained result | **REQUIRED SUB-SKILL:** Use `superpowers:systematic-debugging`. |
+| Multi-layer bug, multiple plausible owners or sources of truth, earlier patches moved symptoms, or evidence/logs/snapshots are needed before repair | **REQUIRED SUB-SKILL:** Use `vibe-debug-with-evidence`. |
+| Evidence classifies a complex bug as `implementation` | **REQUIRED SUB-SKILL:** Use `superpowers:systematic-debugging`, reusing the evidence; then use TDD for the local repair. |
+| Evidence classifies a complex bug as `design` and the repair affects ownership, contracts, persistence, protocol, permission, artifact, lifecycle, or compatibility | **REQUIRED SUB-SKILL:** Use `architecture-first-design`. |
+| A proven single-owner defect, ordinary test failure, or unexplained result without the complex-bug signals above | **REQUIRED SUB-SKILL:** Use `superpowers:systematic-debugging`. |
 | Before any completion claim | **REQUIRED SUB-SKILL:** Use `superpowers:verification-before-completion`. |
 | Branch work is verified | **REQUIRED SUB-SKILL:** Use `superpowers:finishing-a-development-branch`. |
 
 If implementation begins, the selected workflow determines worktree, TDD, review, and
 verification rules. This Skill adds only identity, attention, state, and handoff policy.
+Architecture document state is not the task status: the task remains `PLANNING` while
+the architecture track is `DRAFT` or `IN REVIEW`, and becomes `RUNNING` only when
+implementation starts.
 
 ## State and Attention Policy
 
@@ -54,11 +62,17 @@ architecture boundary. State the decision, evidence, why no interruption was nee
 and rollback in `decisions.md`.
 
 Stop and aggregate all blockers in `blockers.md` when credentials/permission are absent;
-work is destructive or irreversible; acceptance conditions conflict; a public API or
-architecture boundary must change; security/privacy/legal/compliance risk appears;
-scope approaches twice the plan; focused repair is exhausted; or task identity cannot
-be established. Transition to `NEEDS_HUMAN_DECISION` or `FAILED_SAFELY`. One question
-must list why autonomy failed, options, consequences, and a recommended option.
+work is destructive or irreversible; acceptance conditions conflict; security/privacy/
+legal/compliance risk appears; scope approaches twice the plan; focused repair is
+exhausted; or task identity cannot be established. Transition to
+`NEEDS_HUMAN_DECISION` or `FAILED_SAFELY`. One question must list why autonomy failed,
+options, consequences, and a recommended option.
+
+A possible public API or architecture-boundary change is a routing signal, not by itself
+an interruption. Route it to `architecture-first-design`, collect evidence and compare
+options while in `PLANNING`, and interrupt only when its `Open Decisions` contains a
+choice that existing evidence cannot resolve and that would change a boundary, data
+model, lifecycle, compatibility strategy, or verification contract.
 
 ## Known Pressure Traps
 

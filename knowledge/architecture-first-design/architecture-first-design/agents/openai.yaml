@@ -1,0 +1,4 @@
+interface:
+  display_name: "架构优先设计"
+  short_description: "为高风险变更建立可批准的架构边界与交接。"
+  default_prompt: "使用 $architecture-first-design 为这个跨边界变更产出可交接到实施计划的架构设计。"
