@@ -4,6 +4,18 @@
 
 ## 当前内容
 
+### [agent-orchestration](./knowledge/agent-orchestration/)
+
+围绕 Agent 控制权分配、验证预算、上下文边界，以及“受限推理”与“自主编排”两种模式的思考沉淀。
+
+- [反思文章：不要把一句话，当作给 Agent 的全权委托](./knowledge/agent-orchestration/2026-07-30-agent-control-and-evaluation.md)
+
+### [agent-execution-budget](./knowledge/agent-execution-budget/)
+
+一份可复制到项目 Agent 指令中的短规则卡，用于约束编码 Agent 对慢构建、测试、格式化和静态检查的执行预算。
+
+- [Agent Execution Budget](./knowledge/agent-execution-budget/agent-execution-budget.md)
+
 ### [system-architecture-review](./knowledge/system-architecture-review/README.md)
 
 围绕“从任务级设计走向系统级设计”的一组知识沉淀，包含：
