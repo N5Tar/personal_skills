@@ -16,6 +16,12 @@
 
 - [Agent Execution Budget](./knowledge/agent-execution-budget/agent-execution-budget.md)
 
+### [keep-system-simple](./knowledge/keep-system-simple/)
+
+一份可复制到项目 Agent 指令中的短规则卡，先建立可验证的最小工作闭环，再按明确的任务需要增加能力，并让协作保持可观察、可控制、可审阅与可恢复。
+
+- [Keep System Simple](./knowledge/keep-system-simple/keep-system-simple.md)
+
 ### [system-architecture-review](./knowledge/system-architecture-review/README.md)
 
 围绕“从任务级设计走向系统级设计”的一组知识沉淀，包含：
