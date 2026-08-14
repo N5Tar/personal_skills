@@ -5,7 +5,7 @@ target does not exist:
 
 ~~~bash
 test ! -e ~/.agents/skills/attention-safe-orchestration
-cp -R knowledge/attention-safe-orchestration/attention-safe-orchestration \
+cp -R skills/attention-safe-orchestration \
   ~/.agents/skills/attention-safe-orchestration
 ~~~
 
@@ -22,4 +22,4 @@ rm -rf ~/.agents/skills/attention-safe-orchestration
 ~~~
 
 To remove the experiment source, delete
-`knowledge/attention-safe-orchestration/` in its Git commit/revert workflow.
+`skills/attention-safe-orchestration/` in its Git commit/revert workflow.

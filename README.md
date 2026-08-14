@@ -2,40 +2,52 @@
 
 在 vibe coding 和 AI 协作开发过程中，持续沉淀的一些方法、判断框架与反思文章。
 
-## 当前内容
+按内容类型分成三块：可安装的 Agent 技能、方法卡/规则卡、反思文章。
 
-### [agent-orchestration](./knowledge/agent-orchestration/)
+## Skills — 可安装的 Agent 技能
 
-围绕 Agent 控制权分配、验证预算、上下文边界，以及“受限推理”与“自主编排”两种模式的思考沉淀。
+SKILL.md 格式，可安装或引用到项目中。
 
-- [反思文章：不要把一句话，当作给 Agent 的全权委托](./knowledge/agent-orchestration/2026-07-30-agent-control-and-evaluation.md)
+### [attention-safe-orchestration](./skills/attention-safe-orchestration/)
 
-### [agent-execution-budget](./knowledge/agent-execution-budget/)
+让多个 Agent 并发工作时，只在明确的决策和验收节点消耗人类注意力；把工作路由到既有技能，不重复实现。
 
-一份可复制到项目 Agent 指令中的短规则卡，用于约束编码 Agent 对慢构建、测试、格式化和静态检查的执行预算。
+- [技能入口](./skills/attention-safe-orchestration/SKILL.md)
+- [使用说明](./skills/attention-safe-orchestration/README.md)
+- [设计文档](./skills/attention-safe-orchestration/docs/)
 
-- [Agent Execution Budget](./knowledge/agent-execution-budget/agent-execution-budget.md)
+### [architecture-first-design](./skills/architecture-first-design/)
 
-### [keep-system-simple](./knowledge/keep-system-simple/)
+当改动可能触及所有权边界、公共 API/协议、持久化、权限、产物、生命周期、兼容性或跨包时，先产出有证据支撑的架构文档，再进入实现。
 
-一份可复制到项目 Agent 指令中的短规则卡，先建立可验证的最小工作闭环，再按明确的任务需要增加能力，并让协作保持可观察、可控制、可审阅与可恢复。
+- [技能入口](./skills/architecture-first-design/SKILL.md)
 
-- [Keep System Simple](./knowledge/keep-system-simple/keep-system-simple.md)
+### [vibe-debug-with-evidence](./skills/vibe-debug-with-evidence/)
 
-### [system-architecture-review](./knowledge/system-architecture-review/README.md)
+在 vibe coding 里排查复杂 Bug 时，先冻结症状、收集日志与可证伪证据，再动手修复，避免陷入「读代码→猜原因→打补丁」的循环。
 
-围绕“从任务级设计走向系统级设计”的一组知识沉淀，包含：
+- [技能入口](./skills/vibe-debug-with-evidence/SKILL.md)
+- [调试手册](./skills/vibe-debug-with-evidence/references/ai-debugging-playbook.md)
 
-- 一份整理自 Codex skill `system-architecture-review` 的方法说明
-- 一篇关于从 vibe coding 走向系统级设计的反思文章
+## Methods — 方法卡 & 规则卡
 
-具体文件：
+可直接复制到项目的 AGENT.md / CLAUDE.md，或作为方法参考长期查阅。
 
-- [方法说明](./knowledge/system-architecture-review/README.md)
-- [反思文章：从 Vibe Coding 到系统级设计](./knowledge/system-architecture-review/blog/2026-07-11-from-vibe-coding-to-system-design.md)
+- [Agent Execution Budget](./methods/agent-execution-budget.md) — 把慢构建/测试/静态检查当作有限预算，而非每次编辑后必跑的命令
+- [Keep System Simple](./methods/keep-system-simple.md) — 先建立可验证的最小工作闭环，再按明确需要增加能力
+- [System Architecture Review](./methods/system-architecture-review.md) — 从「任务级设计」走向「系统级设计」的检查方法
+
+## Blog — 反思文章
+
+- [从 Vibe Coding 到系统级设计](./blog/2026-07-11-from-vibe-coding-to-system-design.md)（2026-07-11）
+- [不要把一句话，当作给 Agent 的全权委托](./blog/2026-07-30-agent-control-and-evaluation.md)（2026-07-30）
+- [当 Agent 开始修改自己，它已经开始帮我干活了](./blog/2026-08-05-when-agent-starts-helping.md)（2026-08-05）
+- [在 vibe coding 里，如何约束 AI 处理复杂 Bug](./blog/vibe-coding-ai-debugging-methodology.md)
+- [配置不是表单状态](./blog/2026-08-13-configuration-is-a-runtime-boundary.md)（2026-08-13）
+- [能完成一次任务之后，Agent 还要学会连续工作](./blog/2026-08-13-long-running-agent-tasks.md)（2026-08-13）
 
 ## 维护原则
 
-- 每个主题尽量形成独立目录，方便持续扩展
+- 三个顶层目录按内容类型区分：`skills/`（技能）、`methods/`（方法/规则卡）、`blog/`（反思文章）
 - 优先沉淀可复用的方法，而不只是一次性的任务记录
-- 反思文章和方法说明分开存放，但彼此互相链接
+- 反思文章用「日期-英文-slug」命名，方法卡与方法说明互相链接

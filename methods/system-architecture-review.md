@@ -170,4 +170,4 @@ Practical future behavior.
 
 ## 相关内容
 
-- [反思文章：从 Vibe Coding 到系统级设计](./blog/2026-07-11-from-vibe-coding-to-system-design.md)
+- [反思文章：从 Vibe Coding 到系统级设计](../blog/2026-07-11-from-vibe-coding-to-system-design.md)

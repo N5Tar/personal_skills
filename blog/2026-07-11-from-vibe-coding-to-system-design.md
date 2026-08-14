@@ -2,7 +2,7 @@
 
 来源：整理迁移自 `/Users/jinyan/workspace/myAgent/docs/blog/2026-07-11-from-vibe-coding-to-system-design.md`。
 
-关联方法：[System Architecture Review](../README.md)
+关联方法：[System Architecture Review](../methods/system-architecture-review.md)
 
 今天做 Agent Runtime 的底层设计时，我有一个很强的感受：真正让我豁然开朗的，并不是某一段代码终于写对了，也不是某个功能终于跑通了，而是这个系统背后的结构突然显影了。
 
